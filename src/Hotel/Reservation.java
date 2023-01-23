@@ -2,6 +2,8 @@ package Hotel;
 
 import java.util.Scanner;
 
+
+//un commentaire ajouté
 public class Reservation {
 
 	private String login;
