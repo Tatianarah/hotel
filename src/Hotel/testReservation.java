@@ -32,26 +32,22 @@ public class testReservation {
 		ch1.setNumero(1);
 		ch1.setType("Single");
 		ArrayList<Chambre> listChambre = new ArrayList<>();
-		
+
 		listChambre.add(ch1);
-		
+
 		Chambre ch2 = new Chambre();
 		ch2.setEtat(true);
 		ch2.setNumero(2);
 		ch2.setType("twin");
 
-		
 		listChambre.add(ch2);
-		
+
 		Chambre ch3 = new Chambre();
 		ch3.setEtat(true);
 		ch3.setNumero(3);
-		ch3.setType("Single");
-	
-		
+		ch3.setType("Suite");
+
 		listChambre.add(ch3);
-		
-		
 
 		h.setListeCambre(listChambre);
 
@@ -81,18 +77,22 @@ public class testReservation {
 			else if (choix == 3) {
 				System.out.println("Nombre de chambre libre: " + r.compterLibre(h));
 			}
-			
-			if (choix==7) {
+
+			if (choix == 7) {
 				r.libererChambre(h);
 			}
-			
-			if (choix==4) {
+
+			if (choix == 4) {
 				r.premierVide(h);
-				System.out.println("La première chambre libre est: " +r.premierVide(h));
+				System.out.println("La première chambre libre est: " + r.premierVide(h));
+			}
+
+			if (choix == 5) {
+			r.dernierVide(h);
 			}
 			
-			
-			System.out.println("1- Afficher l'état de l'hôtel");
+
+					System.out.println("1- Afficher l'état de l'hôtel");
 			System.out.println("2- Afficher le nombre de chambres réservées");
 			System.out.println("3- Afficher le nombre de chambres libres");
 			System.out.println("4- Afficher le numéro de la première chambre vide");
@@ -103,13 +103,8 @@ public class testReservation {
 			System.out.println("8- Quitter");
 			System.out.println("Votre choix ? ");
 			choix = sc.nextInt();
-		
-			
-			
 
 		}
-
-	
 
 	}
 
